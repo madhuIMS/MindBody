@@ -1,0 +1,231 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+
+        var programsData;
+
+
+        window.onload = function () {
+            $.ajaxSetup({
+                async: false
+            });
+
+            $.getJSON("https://api.myjson.com/bins/5bdb3", function (data) {
+                programsData = data;
+            });
+
+            var months = ["Jan", "Feb", "Mar", "Äpr", "May", "Jun", "Jul"];
+
+            CanvasJS.addColorSet("greenShades",
+                [
+                "#CCBCDD",
+                "#B6D8B9"
+                ]);
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                colorSet: "greenShades",
+                title: { text: "Yoga classes" },
+                data: [{
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[0].Sales.PreviousYear[0] },
+					  { label: months[1], y: programsData[0].Sales.PreviousYear[1] },
+					  { label: months[2], y: programsData[0].Sales.PreviousYear[2] },
+					  { label: months[3], y: programsData[0].Sales.PreviousYear[3] },
+					  { label: months[4], y: programsData[0].Sales.PreviousYear[4] },
+					  { label: months[5], y: programsData[0].Sales.PreviousYear[5] },
+                      { label: months[6], y: programsData[0].Sales.PreviousYear[6] },
+
+                    ]
+                }, {
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[0].Sales.CurrentYear[0] },
+					  { label: months[1], y: programsData[0].Sales.CurrentYear[1] },
+					  { label: months[2], y: programsData[0].Sales.CurrentYear[2] },
+					  { label: months[3], y: programsData[0].Sales.CurrentYear[3] },
+					  { label: months[4], y: programsData[0].Sales.CurrentYear[4] },
+					  { label: months[5], y: programsData[0].Sales.CurrentYear[5] },
+                      { label: months[6], y: programsData[0].Sales.CurrentYear[6] },
+                    ]
+                }]
+            });
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                colorSet: "greenShades",
+                title: { text: "Yoga Privates" },
+                data: [{
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[1].Sales.PreviousYear[0] },
+					  { label: months[1], y: programsData[1].Sales.PreviousYear[1] },
+					  { label: months[2], y: programsData[1].Sales.PreviousYear[2] },
+					  { label: months[3], y: programsData[1].Sales.PreviousYear[3] },
+					  { label: months[4], y: programsData[1].Sales.PreviousYear[4] },
+					  { label: months[5], y: programsData[1].Sales.PreviousYear[5] },
+                      { label: months[6], y: programsData[1].Sales.PreviousYear[6] },
+
+                    ]
+                }, {
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[1].Sales.CurrentYear[0] },
+					  { label: months[1], y: programsData[1].Sales.CurrentYear[1] },
+					  { label: months[2], y: programsData[1].Sales.CurrentYear[2] },
+					  { label: months[3], y: programsData[1].Sales.CurrentYear[3] },
+					  { label: months[4], y: programsData[1].Sales.CurrentYear[4] },
+					  { label: months[5], y: programsData[1].Sales.CurrentYear[5] },
+                      { label: months[6], y: programsData[1].Sales.CurrentYear[6] },
+
+                    ]
+                }]
+            });
+            var chart3 = new CanvasJS.Chart("chartContainer3", {
+                colorSet: "greenShades",
+                title: { text: "Yoga Duets" },
+                data: [{
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[2].Sales.PreviousYear[0] },
+					  { label: months[1], y: programsData[2].Sales.PreviousYear[1] },
+					  { label: months[2], y: programsData[2].Sales.PreviousYear[2] },
+					  { label: months[3], y: programsData[2].Sales.PreviousYear[3] },
+					  { label: months[4], y: programsData[2].Sales.PreviousYear[4] },
+					  { label: months[5], y: programsData[2].Sales.PreviousYear[5] },
+                      { label: months[6], y: programsData[2].Sales.PreviousYear[6] },
+
+                    ]
+                }, {
+                    type: "column",
+                    dataPoints: [
+					  { label: months[0], y: programsData[2].Sales.CurrentYear[0] },
+					  { label: months[1], y: programsData[2].Sales.CurrentYear[1] },
+					  { label: months[2], y: programsData[2].Sales.CurrentYear[2] },
+					  { label: months[3], y: programsData[2].Sales.CurrentYear[3] },
+					  { label: months[4], y: programsData[2].Sales.CurrentYear[4] },
+					  { label: months[5], y: programsData[2].Sales.CurrentYear[5] },
+                      { label: months[6], y: programsData[2].Sales.CurrentYear[6] },
+
+                    ]
+                }]
+            });
+            chart1.render();
+            chart2.render();
+            chart3.render();
+        }
+    </script>
+    <script src="Scripts/canvasjs.min.js"></script>
+
+</head>
+
+<body style="background-color:#F1F1EB">
+    <div style="width: 20%; height: 200px;display: inline-block;">
+        <div id="chartContainer1" style="height: 200px;"></div>
+
+        <!--<div><a>more</a></div>-->
+    </div>
+    <div style="width: 20%; height: 200px;display: inline-block;margin-left:20px">
+        <div id="chartContainer2" style="height: 200px;"></div>
+
+        <!--<div><a>more</a></div>-->
+    </div>
+
+    <div style="width: 20%;height: 200px;display: inline-block;margin-left:20px">
+        <div id="chartContainer3" style="height: 200px;"></div>
+
+        <!--<div><a>more</a></div>-->
+    </div>
+    <div style="margin-top:10px">
+        <div style="width: 20%; height: 50px;display: inline-block;">
+            dfsdv
+        </div>
+        <div style="width: 20%; height: 50px;display: inline-block;margin-left:20px">
+            svsdv
+        </div>
+        <div style="width: 20%; height: 50px;display: inline-block;margin-left:20px">
+            vsvsvsv
+        </div>
+    </div>
+    <div style="margin-top:50px">
+        <div style="width: 20%; height: 10px;display: inline-block;">
+            <a href="javascript:void(0)" onclick="GetMore()">more</a>
+        </div>
+        <div style="width: 20%; height: 10px;display: inline-block;margin-left:20px">
+            <a href="javascript:void(0)">more</a>
+        </div>
+        <div style="width: 20%; height: 10px;display: inline-block;margin-left:20px">
+            <a href="javascript:void(0)">more</a>
+        </div>
+    </div>
+
+    <div id="divMore" style="background-color:white">
+        
+    </div>
+</body>
+
+
+
+
+</html>
+<script type="text/javascript">
+    function GetMore() {
+        $.getJSON("https://api.myjson.com/bins/47axv", function (data) {
+            if ($(data).length > 0) {
+                var tablehtml = '<table><tr><th>Price Name</th><th>Current</th><th>1- Year</th></tr>';
+               
+                var objectSearched = getObjects(data, 'Name', 'Monthly Unlimited');
+                if (objectSearched.length > 0)
+                {
+                    tablehtml = tablehtml + '<tr><td> Monthly Unlimited </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+               
+                objectSearched = getObjects(data, 'Name', 'Student 1 Month')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> Student 1 Month </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+
+                objectSearched = getObjects(data, 'Name', 'Single Visit')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> Single Visit </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+
+                objectSearched = getObjects(data, 'Name', '10 Class Pass')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> 10 Class Pass </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+
+                objectSearched = getObjects(data, 'Name', 'Student Single Visit')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> Student Single Visit </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+
+                objectSearched = getObjects(data, 'Name', '20 Class Pass')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> 20 Class Pass </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+
+                objectSearched = getObjects(data, 'Name', '5 Class Pass')
+                if (objectSearched.length > 0) {
+                    tablehtml = tablehtml + '<tr><td> 5 Class Pass </td><td> ' + objectSearched[0]['Sales'] + '</td><td>  </td></tr>';
+                }
+                $('#divMore').html(tablehtml);
+            }
+
+        });
+    }
+
+
+
+    function getObjects(obj, key, val) {
+        var objects = [];
+        for (var i in obj) {
+            if (!obj.hasOwnProperty(i)) continue;
+            if (typeof obj[i] == 'object') {
+                objects = objects.concat(getObjects(obj[i], key, val));
+            } else if (i == key && obj[key] == val) {
+                objects.push(obj);
+            }
+        }
+        return objects;
+    }
+</script>
