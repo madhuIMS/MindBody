@@ -26,6 +26,19 @@
             var chart1 = new CanvasJS.Chart("chartContainer1", {
                 colorSet: "chartColors",
                 title: { text: "Yoga classes" },
+                axisX: {
+
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+                   
+                },
+                axisY: {
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+                    valueFormatString: " "
+                },
                 data: [{
                     type: "column",
                     dataPoints: [
@@ -54,6 +67,19 @@
             var chart2 = new CanvasJS.Chart("chartContainer2", {
                 colorSet: "chartColors",
                 title: { text: "Yoga Privates" },
+                axisX: {
+
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+
+                },
+                axisY: {
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+                    valueFormatString: " "
+                },
                 data: [{
                     type: "column",
                     dataPoints: [
@@ -83,6 +109,19 @@
             var chart3 = new CanvasJS.Chart("chartContainer3", {
                 colorSet: "chartColors",
                 title: { text: "Yoga Duets" },
+                axisX: {
+
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+
+                },
+                axisY: {
+                    lineThickness: 0,
+                    tickThickness: 0,
+                    gridThickness: 0,
+                    valueFormatString: " "
+                },
                 data: [{
                     type: "column",
                     dataPoints: [
@@ -161,22 +200,22 @@
         </div>
         <div style="margin-top:0px">
             <div style="width: 20%; display: inline-block;"></div>
-            <div id="divMiddleClasses" style="width: 20%; height: auto;display: inline-block;background-color:#FBFBF6">
+            <div id="divMiddleClasses" style="width: 20%; height: auto;display: inline-block;background-color:#FBFBF6;padding-left:20px;padding-top:20px">
             </div>
-            <div id="divMiddlePrivates" style="width: 20%; height: auto;display: inline-block;margin-left:20px;background-color:#FBFBF6">
+            <div id="divMiddlePrivates" style="width: 20%; height: auto;display: inline-block;margin-left:20px;background-color:#FBFBF6;padding-left:20px;padding-top:20px">
             </div>
-            <div id="divMiddleDuets" style="width: 20%; height: auto;display: inline-block;margin-left:20px;background-color:#FBFBF6">
+            <div id="divMiddleDuets" style="width: 20%; height: auto;display: inline-block;margin-left:20px;background-color:#FBFBF6;padding-left:20px;padding-top:20px">
             </div>
         </div>
         <div style="margin-top:0px">
             <div style="width: 20%; display: inline-block;"></div>
-            <div id="divMoreClasses" style="width: 20%; height: auto;background-color:white;display: inline-block;vertical-align:top">
+            <div id="divMoreClasses" style="width: 20%; height: auto;background-color:white;display: inline-block;vertical-align:top;padding-left:20px;padding-top:20px">
                 <a href="javascript:void(0)" onclick="GetMore('divMoreClasses')">more</a>
             </div>
-            <div id="divMorePrivates" style="width: 20%; height: auto;background-color:white;display: inline-block;margin-left:20px;vertical-align:top">
+            <div id="divMorePrivates" style="width: 20%; height: auto;background-color:white;display: inline-block;margin-left:20px;vertical-align:top;padding-left:20px;padding-top:20px">
                 <a href="javascript:void(0)" onclick="GetMore('divMorePrivates')">more</a>
             </div>
-            <div id="divMoreDuets" style="width: 20%; height: auto;background-color:white;display: inline-block;margin-left:20px;vertical-align:top">
+            <div id="divMoreDuets" style="width: 20%; height: auto;background-color:white;display: inline-block;margin-left:20px;vertical-align:top;padding-left:20px;padding-top:20px">
                 <a href="javascript:void(0)" onclick="GetMore('divMoreDuets')">more</a>
             </div>
         </div>
