@@ -1,0 +1,173 @@
+﻿body {
+    background-color: #F1F1EB;
+    align-content: center;
+}
+
+#divMain {
+    margin-left: 0px;
+}
+
+#divYogaClasses {
+    width: 100%;
+    height: 200px;
+    /*display: inline-block;*/
+}
+
+#divYogaPrivates {
+    width: 100%;
+    height: 200px;
+    /*display: inline-block;*/
+    /*margin-left: 20px;*/
+}
+
+#divYogaDuets {
+    width: 100%;
+    height: 200px;
+    /*display: inline-block;*/
+    /*margin-left: 20px;*/
+}
+
+#divMiddledataCtr {
+    margin-top: 0px;
+}
+
+
+
+#divMiddleClasses {
+    width: 100%;
+    height: auto;
+    /*display: inline-block;*/
+    background-color: #FBFBF6;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#divMiddlePrivates {
+    width: 100%;
+    height: auto;
+    /*display: inline-block;*/
+   
+    background-color: #FBFBF6;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#divMiddleDuets {
+    width: 100%;
+    height: auto;
+    /*display: inline-block;*/
+    
+    background-color: #FBFBF6;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#divMoreClasses {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#divMorePrivates {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    /*display: inline-block;*/
+    /*margin-left: 20px;*/
+    vertical-align: top;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#divMoreDuets {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    /*display: inline-block;*/
+    /*margin-left: 20px;*/
+    vertical-align: top;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#divTable {
+    width: 60%;
+    height: auto;
+    /*display: inline-block;*/
+    vertical-align: top;
+}
+
+.logo {
+    float: left;
+}
+
+.panel-default > .urbenTab {
+    padding: 20px 10px;
+    position: relative;
+	background: #edf7f3;
+}
+
+ul.urbenMenu {
+    position: relative;
+    margin-top: 15px;
+    line-height: 0;
+    display: inline-block;
+    border: none;
+    top: 26px;
+}
+
+ul.urbenMenu > li {
+    margin-bottom: 0;
+}
+
+ul.urbenMenu > li:first-child {
+    padding-left: 80PX;
+}
+
+ul.urbenMenu > li>a:hover {
+    border-color:transparent;
+}
+
+ul.urbenMenu > li > a:focus, ul.urbenMenu > li > a:hover {
+    background-color: #fff;
+}
+
+.overview {
+    background: #e3e3da;
+    display: inline-block;
+    width: 100%;
+	padding: 15px
+}
+
+a.btnPlus {
+    font-size: 40px;
+    padding: 10px 25px;
+    background: #9dc286;
+    color: #fff;
+    box-shadow: 0px 0px 5px 0px #95b581;
+    border: 1px solid #95b581;
+}
+
+.subNav > li > a:focus, .subNav > li > a:hover {
+    text-decoration: none;
+    background-color:transparent;
+}
+
+.subNav > li > .myActive{ color:#000;
+}
+
+.mrTop {
+    margin-top:20px;
+}
+
+.lineChart {
+    width:70px;
+    height:40px;
+}

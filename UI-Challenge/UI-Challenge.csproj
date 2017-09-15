@@ -118,11 +118,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Index.html" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Scripts\canvasjs.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.canvasjs.min.js" />
-    <Content Include="Styles\styles.css" />
+    <Content Include="Scripts\ui-challenge.js" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\ui-challenge.css" />
+    <Content Include="UrbanYoga.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
